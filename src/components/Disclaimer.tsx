@@ -16,8 +16,9 @@ export default function Disclaimer() {
         <p>
           Plan details, pricing, and features shown on this website are based on AT&amp;T&apos;s
           official offerings and are subject to change. AT&amp;T and related marks are trademarks
-          of their respective owners. {site.organization} is an independent authorized reseller
-          and is not owned, operated, or controlled by AT&amp;T.
+          of their respective owners. {site.organization}{" "}
+          is an independent authorized reseller and is not owned, operated, or controlled by
+          AT&amp;T.
         </p>
 
         <p>

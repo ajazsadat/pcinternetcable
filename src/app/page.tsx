@@ -165,8 +165,10 @@ export default function HomePage() {
         </div>
         <div className={`container ${styles.heroContent}`}>
           <div className={`${styles.heroCopy} reveal`}>
-            <p className={styles.brandLockup}>PC Internet Cable</p>
-            <h1>Find reliable Internet, TV &amp; wireless plans near you</h1>
+            <h1 className={styles.brandLockup}>PC Internet Cable</h1>
+            <p className={styles.heroHeadline}>
+              Find reliable Internet, TV &amp; wireless plans near you
+            </p>
             <p>
               If your connection is slow, inconsistent, or too expensive — we can help you compare
               trusted U.S. broadband options and activate the plan that fits your home or business.
