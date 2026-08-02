@@ -20,9 +20,10 @@ npm run dev
 
 ```bash
 npm run build
+npm start
 ```
 
-Static export output is written to `out/`.
+Deployed on Vercel. Framework preset should be **Next.js** with no custom Output Directory override.
 
 ## Contact
 
