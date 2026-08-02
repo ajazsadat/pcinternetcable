@@ -19,6 +19,17 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
+      <div className={styles.disclaimerBar} role="note">
+        <div className={`container ${styles.disclaimerInner}`}>
+          <p>
+            <strong>Disclaimer:</strong> {site.organization} (d/b/a {site.domain}) is an
+            independent comparison platform. We do not directly sell, install, or manage Internet
+            or TV services. All services are fulfilled and billed by licensed carriers.{" "}
+            <a href="#disclaimer">Full disclaimer</a>
+          </p>
+        </div>
+      </div>
+
       <div className={`container ${styles.inner}`}>
         <Link href="/" className={styles.brand} onClick={() => setOpen(false)}>
           <span className={styles.mark} aria-hidden="true" />

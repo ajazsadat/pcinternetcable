@@ -3,7 +3,11 @@ import styles from "./Disclaimer.module.css";
 
 export default function Disclaimer() {
   return (
-    <section className={`disclaimer ${styles.wrap}`} aria-label="Offers and disclosures">
+    <section
+      id="disclaimer"
+      className={`disclaimer ${styles.wrap}`}
+      aria-label="Offers and disclosures"
+    >
       <div className="container">
         <h3>Disclaimer</h3>
         <p>
