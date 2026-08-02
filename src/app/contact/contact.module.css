@@ -1,0 +1,64 @@
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.cards {
+  display: grid;
+  gap: 1rem;
+}
+
+.card,
+.details {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 1.5rem;
+}
+
+.card h2 {
+  font-size: 1.55rem;
+}
+
+.card p {
+  color: var(--muted);
+}
+
+.details h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.85rem;
+}
+
+.details ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.details li + li {
+  margin-top: 0.65rem;
+}
+
+.details a {
+  color: var(--signal-deep);
+  font-weight: 600;
+}
+
+.formIntro {
+  margin-bottom: 1rem;
+}
+
+.formIntro h2 {
+  font-size: 1.7rem;
+}
+
+.formIntro p {
+  color: var(--muted);
+}
+
+@media (min-width: 960px) {
+  .grid {
+    grid-template-columns: 0.95fr 1.05fr;
+    align-items: start;
+  }
+}

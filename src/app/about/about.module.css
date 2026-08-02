@@ -1,0 +1,65 @@
+.layout {
+  display: grid;
+  gap: 2rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+}
+
+.asideCard {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.asideCard img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.asideBody {
+  padding: 1.35rem;
+}
+
+.asideBody h3 {
+  margin-bottom: 0.2rem;
+}
+
+.asideBody p {
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.asideBody ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: var(--ink-soft);
+}
+
+.asideBody li + li {
+  margin-top: 0.45rem;
+}
+
+.asideBody a:hover {
+  color: var(--signal-deep);
+}
+
+@media (min-width: 960px) {
+  .layout {
+    grid-template-columns: 1.4fr 0.8fr;
+    align-items: start;
+  }
+
+  .aside {
+    position: sticky;
+    top: calc(var(--header-h) + 1.25rem);
+  }
+}
