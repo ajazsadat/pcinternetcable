@@ -13,9 +13,17 @@
   --shadow: 0 18px 48px rgba(7, 19, 31, 0.14);
   --radius: 14px;
   --max: 1120px;
-  --header-h: 76px;
+  --disclaimer-h: 52px;
+  --nav-h: 76px;
+  --header-h: calc(var(--disclaimer-h) + var(--nav-h));
   --font-display: var(--font-syne), "Syne", sans-serif;
   --font-body: var(--font-figtree), "Figtree", sans-serif;
+}
+
+@media (max-width: 720px) {
+  :root {
+    --disclaimer-h: 72px;
+  }
 }
 
 *,
@@ -283,6 +291,7 @@ p {
   color: rgba(255, 255, 255, 0.72);
   padding: 2.5rem 0;
   font-size: 0.85rem;
+  scroll-margin-top: calc(var(--header-h) + 0.75rem);
 }
 
 .disclaimer h3,
