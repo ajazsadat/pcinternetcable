@@ -9,8 +9,8 @@ import styles from "./Header.module.css";
 const links = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
+  { href: "/live-agent", label: "Live Agent" },
   { href: "/contact", label: "Contact" },
-  { href: "/privacy-policy", label: "Privacy" },
 ];
 
 export default function Header() {
