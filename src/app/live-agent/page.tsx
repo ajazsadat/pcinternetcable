@@ -65,11 +65,11 @@ export default function LiveAgentPage() {
                 />
               </svg>
             </div>
-            <h2>Chat</h2>
-            <p className={styles.sub}>With A Live Agent</p>
+            <h2>Send Us a Message</h2>
+            <p className={styles.sub}>Prefer not to call? Fill out our contact form and we&apos;ll follow up.</p>
             <div className={styles.rule} />
             <Link className={styles.chatBtn} href="/contact">
-              Chat Now
+              Contact Form
             </Link>
           </article>
         </div>

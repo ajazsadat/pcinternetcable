@@ -99,6 +99,8 @@
   color: var(--la-orange);
   font-weight: 700;
   font-size: 1rem;
+  max-width: 28ch;
+  line-height: 1.35;
 }
 
 .rule {
