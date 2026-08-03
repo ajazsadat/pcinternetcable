@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Figtree, Syne } from "next/font/google";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import Disclaimer from "@/components/Disclaimer";
+import SiteChrome from "@/components/SiteChrome";
 import { site } from "@/lib/site";
 import "./globals.css";
 
@@ -25,7 +23,7 @@ export const metadata: Metadata = {
     template: `%s | ${site.name}`,
   },
   description:
-    "PC Internet Cable helps you compare and activate reliable Internet, TV, and wireless plans from trusted U.S. providers, including AT&T Fiber.",
+    "PC Internet Cable helps you compare and activate reliable Internet, TV, and wireless plans from trusted U.S. providers.",
   openGraph: {
     title: site.name,
     description:
@@ -48,12 +46,7 @@ export default function RootLayout({
         <a className="skip-link" href="#main">
           Skip to content
         </a>
-        <Header />
-        <main id="main" className="site-main">
-          {children}
-        </main>
-        <Disclaimer />
-        <Footer />
+        <SiteChrome>{children}</SiteChrome>
       </body>
     </html>
   );
