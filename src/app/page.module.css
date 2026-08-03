@@ -33,9 +33,8 @@
 .heroContent {
   position: relative;
   z-index: 1;
-  padding: calc(var(--header-h) + 3rem) 0 4rem;
+  padding: calc(var(--header-h) + 3rem) 0 4.5rem;
   display: grid;
-  gap: 2rem;
   align-items: end;
 }
 
@@ -53,7 +52,7 @@
   font-family: var(--font-display);
   font-size: clamp(1.45rem, 3vw, 2rem);
   font-weight: 700;
-  max-width: 18ch;
+  max-width: 20ch;
   margin: 0 0 0.85rem;
   line-height: 1.15;
   letter-spacing: -0.02em;
@@ -61,7 +60,7 @@
 }
 
 .heroCopy p {
-  max-width: 42ch;
+  max-width: 46ch;
   color: rgba(255, 255, 255, 0.86);
   font-size: 1.08rem;
 }
@@ -73,18 +72,13 @@
   margin-top: 1.5rem;
 }
 
-.formPane {
-  width: min(100%, 420px);
-  justify-self: end;
-}
-
 .who,
 .offer,
 .why,
 .steps,
 .guide,
-.att,
 .faq,
+.quote,
 .cta {
   position: relative;
 }
@@ -94,7 +88,6 @@
 .whyGrid,
 .stepsGrid,
 .guideGrid,
-.attPlans,
 .faqList {
   display: grid;
   gap: 1.25rem;
@@ -126,7 +119,6 @@
 .whyItem,
 .step,
 .guideItem,
-.plan,
 .faqItem {
   background: rgba(255, 255, 255, 0.72);
   border: 1px solid rgba(7, 19, 31, 0.08);
@@ -137,7 +129,6 @@
 .offerItem h3,
 .whyItem h3,
 .guideItem h3,
-.plan h3,
 .faqItem h3 {
   font-size: 1.15rem;
   margin-bottom: 0.45rem;
@@ -146,8 +137,7 @@
 .offerItem p,
 .whyItem p,
 .guideItem p,
-.faqItem p,
-.plan p {
+.faqItem p {
   color: var(--muted);
   margin: 0;
 }
@@ -166,90 +156,47 @@
   margin-bottom: 0.85rem;
 }
 
-.attIntro {
+.quoteInner {
   display: grid;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+  gap: 2rem;
+  align-items: start;
+  background:
+    radial-gradient(700px 280px at 10% 0%, rgba(15, 184, 168, 0.14), transparent 55%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.45));
+  border: 1px solid rgba(7, 19, 31, 0.08);
+  border-radius: 28px;
+  padding: 1.75rem;
 }
 
-.attBadge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: rgba(15, 184, 168, 0.12);
+.quoteCopy h2 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  max-width: 14ch;
+}
+
+.quoteCopy p {
+  color: var(--muted);
+  max-width: 46ch;
+}
+
+.quoteCopy a {
   color: var(--signal-deep);
-  border: 1px solid rgba(15, 184, 168, 0.28);
-  border-radius: 999px;
-  padding: 0.35rem 0.8rem;
-  font-size: 0.82rem;
   font-weight: 700;
-  width: fit-content;
+  text-decoration: underline;
 }
 
-.priceRow {
-  display: grid;
-  gap: 1rem;
+.quoteCopy ul {
+  margin: 1.25rem 0 0;
+  padding-left: 1.15rem;
+  color: var(--ink-soft);
 }
 
-.priceCard {
-  background: linear-gradient(145deg, #0d2438, #114a4a);
-  color: #fff;
-  border-radius: 20px;
-  padding: 1.4rem;
+.quoteCopy li + li {
+  margin-top: 0.45rem;
 }
 
-.priceCard strong {
-  display: block;
-  font-family: var(--font-display);
-  font-size: clamp(2.4rem, 4vw, 3.2rem);
-  line-height: 1;
-  margin: 0.35rem 0;
-}
-
-.priceCard span {
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 0.9rem;
-}
-
-.planHead {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  align-items: baseline;
-  margin-bottom: 0.35rem;
-}
-
-.planPrice {
-  font-family: var(--font-display);
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: var(--ink);
-}
-
-.planList {
-  margin: 0.9rem 0 0;
-  padding-left: 1.1rem;
-  color: var(--muted);
-}
-
-.planList li + li {
-  margin-top: 0.35rem;
-}
-
-.likes {
-  display: grid;
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-.likesBox h3 {
-  font-size: 1.1rem;
-}
-
-.likesBox ul {
-  margin: 0;
-  padding-left: 1.1rem;
-  color: var(--muted);
+.quoteForm {
+  width: min(100%, 520px);
+  justify-self: end;
 }
 
 .ctaBand {
@@ -280,10 +227,6 @@
 }
 
 @media (min-width: 900px) {
-  .heroContent {
-    grid-template-columns: 1.2fr 0.9fr;
-  }
-
   .whoInner {
     grid-template-columns: 1.1fr 0.9fr;
   }
@@ -304,25 +247,13 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .attIntro {
-    grid-template-columns: 1.2fr 1fr;
-    align-items: end;
-  }
-
-  .priceRow {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .attPlans {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .likes {
-    grid-template-columns: 1fr 1fr;
-  }
-
   .faqList {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .quoteInner {
+    grid-template-columns: 1fr 1.05fr;
+    padding: 2.4rem;
   }
 
   .ctaBand {
@@ -342,7 +273,7 @@
     padding-bottom: 2.5rem;
   }
 
-  .formPane {
+  .quoteForm {
     justify-self: stretch;
   }
 }

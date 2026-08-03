@@ -54,8 +54,8 @@
   color: rgba(255, 255, 255, 0.55);
 }
 
-@media (min-width: 840px) {
+@media (min-width: 960px) {
   .grid {
-    grid-template-columns: 1.4fr 0.8fr 1fr;
+    grid-template-columns: 1.35fr 0.7fr 0.95fr 0.9fr;
   }
 }

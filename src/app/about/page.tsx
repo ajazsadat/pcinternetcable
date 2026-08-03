@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import PageHero from "@/components/PageHero";
 import { site } from "@/lib/site";
 import styles from "./about.module.css";
 
@@ -12,68 +13,53 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <section className="page-hero">
-        <div className="container reveal">
-          <p className="eyebrow" style={{ color: "#7ce7dc" }}>
-            About us
-          </p>
-          <h1>Connecting homes and businesses to better service</h1>
-          <p>
-            {site.organization} operates PC Internet Cable as an independent authorized reseller —
-            helping you compare, choose, and activate broadband and related services with clarity.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="About us"
+        title="Built to make choosing service less confusing"
+        description={`${site.organization} operates PC Internet Cable so households and businesses can compare connectivity options with clearer guidance — then activate through licensed providers.`}
+      />
 
       <section className="section">
         <div className={`container ${styles.layout}`}>
           <div className="prose">
-            <h2>Our purpose</h2>
+            <h2>What we stand for</h2>
             <p>
-              Finding the right internet or TV plan shouldn&apos;t mean sorting through confusing
-              offers alone. PC Internet Cable gives you a single, convenient place to explore
-              high-speed Internet, Cable TV, Home Phone, Wireless, and Home Security options —
-              featuring availability checks, upfront pricing guidance, and easy installation
-              coordination.
+              Most people do not want a dozen browser tabs open just to understand internet pricing.
+              PC Internet Cable exists to give you a steadier starting point: check what can reach
+              your address, talk through plan types, and move forward when you are ready.
             </p>
             <p>
-              As an independent authorized retailer and licensed reseller for leading U.S. telecom
-              and home service providers, we focus on matching you with plans that fit your
-              location, usage, and budget.
+              We focus on practical matches — location, household usage, and budget — rather than
+              promoting one carrier for every situation.
             </p>
 
-            <h2>Who we are</h2>
+            <h2>Who runs this site</h2>
             <p>
               {site.organization} (d/b/a {site.domain}) is an independent authorized sales partner
-              and reseller. We are not owned, operated, or controlled by any internet service
-              provider or carrier. All broadband and wireless services are delivered, billed, and
-              supported directly by the respective licensed providers.
+              and reseller. We are not owned, operated, or controlled by any ISP or wireless carrier.
+              Service delivery, billing, and technical support remain with the licensed provider you
+              select.
             </p>
             <p>
-              We may receive a commission or referral incentive from providers when a customer
-              activates or purchases a qualifying service through our platform or sales team. These
-              commissions do not affect pricing — customers pay the same rates offered by the
-              provider.
+              When a qualifying order is placed through our team or partner programs, we may receive
+              a commission or referral incentive. That compensation does not change the price you are
+              offered by the provider.
             </p>
 
-            <h2>Reseller disclosure</h2>
+            <h2>Important disclosures</h2>
             <p>
-              All service information, including pricing, availability, and terms, is based on data
-              provided by each carrier. We do not guarantee availability or pricing accuracy in all
-              areas, and customers are encouraged to confirm final details with their chosen
-              provider prior to activation.
-            </p>
-            <p>
-              We are not an internet service provider and do not own or operate network
-              infrastructure. Our role is to help you compare options and facilitate orders through
-              official partner and master-dealer programs.
+              Pricing, promotions, and availability come from carrier data and can change. We do not
+              guarantee every offer in every area. Always confirm final details with your selected
+              provider before activation. Full details are also listed on our{" "}
+              <Link href="/reseller-disclosure">Reseller Disclosure</Link> and{" "}
+              <Link href="/fees-disclosures">Fees &amp; Disclosures</Link> pages.
             </p>
 
-            <h2>How we help</h2>
+            <h2>How we help day to day</h2>
             <ul>
-              <li>Check plan availability by address or ZIP code</li>
-              <li>Compare speeds, promotions, and total estimated costs</li>
-              <li>Coordinate activation and installation with licensed carriers</li>
+              <li>Check service availability by address or ZIP code</li>
+              <li>Compare speeds, packages, and common fees</li>
+              <li>Coordinate activation with licensed carriers</li>
               <li>Answer questions before and during the ordering process</li>
             </ul>
 

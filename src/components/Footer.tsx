@@ -9,9 +9,9 @@ export default function Footer() {
         <div>
           <p className={styles.brand}>PC Internet Cable</p>
           <p className={styles.copy}>
-            {site.organization} (d/b/a {site.domain}) is an independent authorized
-            reseller helping households and businesses compare and activate
-            broadband, TV, wireless, and related services.
+            {site.organization} (d/b/a {site.domain}) is an independent authorized reseller helping
+            households and businesses compare and activate broadband, TV, wireless, and related
+            services.
           </p>
         </div>
 
@@ -25,10 +25,34 @@ export default function Footer() {
               <Link href="/about">About</Link>
             </li>
             <li>
-              <Link href="/contact">Contact</Link>
+              <Link href="/live-agent">Live Agent</Link>
             </li>
             <li>
+              <Link href="/contact">Contact</Link>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Policies</h3>
+          <ul>
+            <li>
               <Link href="/privacy-policy">Privacy Policy</Link>
+            </li>
+            <li>
+              <Link href="/terms-conditions">Terms &amp; Conditions</Link>
+            </li>
+            <li>
+              <Link href="/reseller-disclosure">Reseller Disclosure</Link>
+            </li>
+            <li>
+              <Link href="/cookie-policy">Cookie Policy</Link>
+            </li>
+            <li>
+              <Link href="/fees-disclosures">Fees &amp; Disclosures</Link>
+            </li>
+            <li>
+              <a href="#disclaimer">Disclaimer</a>
             </li>
           </ul>
         </div>
@@ -53,8 +77,8 @@ export default function Footer() {
           © {new Date().getFullYear()} {site.organization}. All rights reserved.
         </p>
         <p>
-          We are not an internet service provider and do not own or operate network
-          infrastructure. Services are fulfilled and billed by licensed carriers.
+          We are not an internet service provider and do not own or operate network infrastructure.
+          Services are fulfilled and billed by licensed carriers.
         </p>
       </div>
     </footer>

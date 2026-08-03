@@ -4,10 +4,15 @@ Marketing website for [pcinternetcable.com](https://pcinternetcable.com), operat
 
 ## Pages
 
-- `/` — Home (includes AT&T provider information)
-- `/about` — About / reseller disclosure
+- `/` — Home
+- `/about` — About
 - `/contact` — Contact & quote form
+- `/live-agent` — Live agent / call options
 - `/privacy-policy` — Privacy Policy
+- `/terms-conditions` — Terms & Conditions
+- `/reseller-disclosure` — Reseller Disclosure
+- `/cookie-policy` — Cookie Policy
+- `/fees-disclosures` — Fees & Disclosures
 
 ## Development
 
