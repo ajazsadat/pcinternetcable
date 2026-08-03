@@ -1,32 +1,42 @@
-.grid {
+.page {
+  min-height: 100vh;
   display: grid;
-  gap: 1.25rem;
+  place-items: center;
+  padding: 3rem 0;
+  background:
+    radial-gradient(900px 420px at 15% 10%, rgba(15, 184, 168, 0.18), transparent 55%),
+    radial-gradient(700px 360px at 90% 0%, rgba(255, 107, 44, 0.12), transparent 50%),
+    linear-gradient(180deg, #0b2033 0%, #12324a 55%, #0f4d4a 100%);
+  color: #fff;
 }
 
-.card {
-  background: rgba(255, 255, 255, 0.82);
-  border: 1px solid var(--line);
-  border-radius: 22px;
-  padding: 1.75rem 1.5rem;
+.inner {
+  display: grid;
+  gap: 1.5rem;
+  justify-items: start;
+  max-width: 720px;
 }
 
-.card h2 {
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  margin-bottom: 0.65rem;
+.inner h1 {
+  font-size: clamp(2.2rem, 6vw, 3.6rem);
+  max-width: 14ch;
+  margin: 0;
+  color: #fff;
+  line-height: 1.05;
 }
 
-.card p {
-  color: var(--muted);
-  max-width: 46ch;
+.call {
+  font-size: 1.05rem;
+  min-height: 54px;
+  padding-inline: 1.6rem;
 }
 
-.card .btn,
-.card a.btn {
-  margin-top: 0.5rem;
-}
+@media (max-width: 720px) {
+  .inner {
+    justify-items: stretch;
+  }
 
-@media (min-width: 800px) {
-  .grid {
-    grid-template-columns: 1fr 1fr;
+  .call {
+    width: 100%;
   }
 }

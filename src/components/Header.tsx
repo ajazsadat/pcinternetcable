@@ -24,8 +24,7 @@ export default function Header() {
           <p>
             <strong>Disclaimer:</strong> {site.organization} (d/b/a {site.domain}) is an
             independent comparison platform. We do not directly sell, install, or manage Internet
-            or TV services. All services are fulfilled and billed by licensed carriers.{" "}
-            <a href="#disclaimer">Full disclaimer</a>
+            or TV services. All services are fulfilled and billed by licensed carriers.
           </p>
         </div>
       </div>

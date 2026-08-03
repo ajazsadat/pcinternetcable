@@ -235,6 +235,10 @@ p {
   min-height: 60vh;
 }
 
+.site-main-bare {
+  min-height: 100vh;
+}
+
 .page-hero {
   position: relative;
   padding: calc(var(--header-h) + 3.5rem) 0 3.5rem;
